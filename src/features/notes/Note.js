@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate } from 'react-router-dom'
-// import { useGetNotesQuery } from './notesApiSlice'
-// import { memo } from 'react'
+
 import { useSelector } from 'react-redux'
 import { selectNoteById } from './notesApiSlice'
 
@@ -24,7 +23,7 @@ const Note = ({ noteId }) => {
                 <td className="table__cell note__status">
                     {note.completed
                         ? <span className="note__status--completed">Completed</span>
-                        : <span className="note__status--open">Pending</span>
+                        : <span className="note__status--open">Open</span>
                     }
                 </td>
                 <td className="table__cell note__created">{created}</td>
